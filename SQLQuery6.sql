@@ -1,7 +1,3 @@
-use advworks2019
-
-select * from [HumanResources].[Employee]
-
 select 
 [JobTitle],
 [MaritalStatus],
@@ -9,7 +5,10 @@ select
 [VacationHours]
 from HumanResources.Employee
 where
- [Gender] = 'M' and
+[Gender] in ('M','F')
+ --([Gender] = 'M' or 
+ --[Gender] = 'F')
+ and
 [VacationHours] > 40
 order by 
 [VacationHours] desc
